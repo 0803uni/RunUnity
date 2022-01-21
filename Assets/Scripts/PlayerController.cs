@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
+   
     [SerializeField]
     private float moveSpeed = 3;
     [SerializeField]
@@ -23,6 +24,9 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        //ここで重力の値を変更している
+        Physics.gravity = new Vector3(0, -250, 0);
+
         //マイフレームアクセスするので、負荷を下げるためにキャッシュしておく
         characterController = GetComponent<CharacterController>();
         //Trasformもキャッシュしすると少し負荷を下がる
@@ -42,6 +46,14 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+       
+        //左右移動
+        int key = 0;
+        if (Input.GetKey(KeyCode.RightArrow)) key = 1;
+        if (Input.GetKey(KeyCode.LeftArrow)) key = -1;
+
+        
+        
         //入力軸による、移動処理
         moveVelocity.x = Input.GetAxis("Horizontal") * moveSpeed;
         moveVelocity.y = Input.GetAxis("Vertical") * moveSpeed;
