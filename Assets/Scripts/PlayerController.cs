@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         //ここで重力の値を変更している
-        Physics.gravity = new Vector3(0, -250, 0);
+        Physics.gravity = new Vector3(0, -220, 0);
 
         //マイフレームアクセスするので、負荷を下げるためにキャッシュしておく
         characterController = GetComponent<CharacterController>();
