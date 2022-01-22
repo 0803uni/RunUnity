@@ -11,8 +11,12 @@ public class PlayerController : MonoBehaviour
     private float moveSpeed = 3;
     [SerializeField]
     private float JumpPower = 3;
+    //[SerializeField]
+    //private float dashSpeed = 10;
+
     [SerializeField]
     private Animator animator;
+    
 
     private CharacterController characterController;
 
@@ -27,7 +31,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         //ここで重力の値を変更している
-        Physics.gravity = new Vector3(0, -220, 0);
+        Physics.gravity = new Vector3(0, -500, 0);
 
         //マイフレームアクセスするので、負荷を下げるためにキャッシュしておく
         characterController = GetComponent<CharacterController>();
@@ -51,10 +55,11 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat
             ("MoveSpeed", new Vector3(moveVelocity.x, 0, moveVelocity.z).magnitude);
        
+       
         //左右移動
-        int key = 0;
-        if (Input.GetKey(KeyCode.RightArrow)) key = 1;
-        if (Input.GetKey(KeyCode.LeftArrow)) key = -1;
+        //int key = 0;
+        //if (Input.GetKey(KeyCode.RightArrow)) key = 1;
+        //if (Input.GetKey(KeyCode.LeftArrow)) key = -1;
 
         
         
