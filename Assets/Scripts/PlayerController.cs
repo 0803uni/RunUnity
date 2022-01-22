@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private float moveSpeed = 3;
     [SerializeField]
     private float JumpPower = 3;
+    [SerializeField]
+    private Animator animator;
 
     private CharacterController characterController;
 
@@ -46,6 +48,8 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        animator.SetFloat
+            ("MoveSpeed", new Vector3(moveVelocity.x, 0, moveVelocity.z).magnitude);
        
         //左右移動
         int key = 0;

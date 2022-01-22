@@ -658,6 +658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   JumpPower: 40
+  animator: {fileID: 993678777}
 --- !u!143 &993678762
 CharacterController:
   m_ObjectHideFlags: 0
@@ -706,6 +707,11 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &993678777 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
+  m_PrefabInstance: {fileID: 310251776}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1219580067
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +856,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.94285715, y: 1}
+    m_SensorSize: {x: 0.9404762, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
