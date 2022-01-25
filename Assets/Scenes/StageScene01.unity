@@ -3393,7 +3393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427c136f401ccb045a328094bff4fb3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 993678760}
+  playerController: {fileID: 993678761}
 --- !u!195 &664719165
 NavMeshAgent:
   m_ObjectHideFlags: 0
