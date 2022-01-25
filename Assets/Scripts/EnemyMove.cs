@@ -20,8 +20,8 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //岩がY軸に対して１秒間に-50000回転させてる
-        transform.Rotate(new Vector3(-50000,0) * Time.deltaTime);
+        //岩がY軸に対して１秒間に-500000回転させてる
+        transform.Rotate(new Vector3(-500000, -500000) * Time.deltaTime);
         // プレイヤーを目指して進む
         navMeshAgent.destination = player.transform.position;
     }
