@@ -5,24 +5,33 @@ using UnityEngine.AI;
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("unitychan")]
-    private GameObject player;
+    private PlayerController playerController;
+    private NavMeshAgent agent;
+    // [Tooltip("unitychan")]
+     // private GameObject player;
 
-    private NavMeshAgent navMeshAgent;
+    private NavMeshAgent _agent;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         // NavMeshAgentを保持しておく
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        _agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         //岩がY軸に対して１秒間に-500000回転させてる
         transform.Rotate(new Vector3(-500000, -500000) * Time.deltaTime);
         // プレイヤーを目指して進む
-        navMeshAgent.destination = player.transform.position;
+        _agent.destination = playerController.transform.position;
     }
+    //public void OnDetectObject(Collider collider)
+    //{
+    //    if(collider.CompareTag("Player"))
+    //    {
+    //        agent.destination = collider.transform.position; 
+    //    }
+    //}
 }
