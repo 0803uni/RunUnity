@@ -65,7 +65,7 @@ public abstract class MobStatus : MonoBehaviour
         if (_life > 0) return;
 
         _state = StateEnum.Die;
-       // _animator.SetTrigger("Die");
+        _animator.SetTrigger("Die");
 
         OnDie();
     }
