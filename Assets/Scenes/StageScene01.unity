@@ -3210,7 +3210,19 @@ MonoBehaviour:
       m_Calls: []
   onTriggerStay:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 664719164}
+        m_TargetAssemblyTypeName: EnemyMove, Assembly-CSharp
+        m_MethodName: OnDetectObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &662190153
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3296,6 +3308,7 @@ GameObject:
   - component: {fileID: 664719165}
   - component: {fileID: 664719164}
   - component: {fileID: 664719166}
+  - component: {fileID: 664719167}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -3433,6 +3446,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &664719167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664719158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84de5c2f50bec7141b9cada94c0c964e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeMax: 10
 --- !u!1001 &667715689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6865,7 +6891,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.1883721, y: 1}
+    m_SensorSize: {x: 1.1720183, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

@@ -2,11 +2,14 @@
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
+//[RequireComponent(typeof)(EnemyStatus))]
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField]
     private PlayerController playerController;
     private NavMeshAgent agent;
+
+    private EnemyStatus _stetus;
     // [Tooltip("unitychan")]
      // private GameObject player;
 
@@ -17,6 +20,7 @@ public class EnemyMove : MonoBehaviour
     {
         // NavMeshAgentを保持しておく
         _agent = GetComponent<NavMeshAgent>();
+        _stetus = GetComponent<EnemyStatus>();
     }
 
     
@@ -24,14 +28,17 @@ public class EnemyMove : MonoBehaviour
     {
         //岩がY軸に対して１秒間に-500000回転させてる
         transform.Rotate(new Vector3(-500000, -500000) * Time.deltaTime);
+        //// プレイヤーを目指して進む
+        //_agent.destination = playerController.transform.position;
+    }
+    public void OnDetectObject(Collider collider)
+    {
         // プレイヤーを目指して進む
         _agent.destination = playerController.transform.position;
+        //if(!_agent.IsMovable)
+        //{
+        //    _agent.isStopped = true;
+        //    return;
+        //}
     }
-    //public void OnDetectObject(Collider collider)
-    //{
-    //    if(collider.CompareTag("Player"))
-    //    {
-    //        agent.destination = collider.transform.position; 
-    //    }
-    //}
 }
