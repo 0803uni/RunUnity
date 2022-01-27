@@ -30,18 +30,18 @@ public class MobAttack : MonoBehaviour
     // 攻撃開始時（コライダーをイネーブル（有効）にします）
     [SerializeField]
     //武器を振る音
-    private AudioSource swingSound;
+   // private AudioSource swingSound;
 
     public void OnAttackStart()
     {
         attackCollider.enabled = true;
 
-        if (swingSound != null)
-        {
-            //武器を振る音の再生をランダムに変化させ、毎回少し違う音出るようにしている
-            swingSound.pitch = Random.Range(0.7f, 1.3f);
-            swingSound.Play();
-        }
+        //if (swingSound != null)
+        //{
+        //    //武器を振る音の再生をランダムに変化させ、毎回少し違う音出るようにしている
+        //    swingSound.pitch = Random.Range(0.7f, 1.3f);
+        //    swingSound.Play();
+        //}
     }
     // attackColliderがヒットしたとき
     public void OnHitAttack(Collider collider)
@@ -62,16 +62,16 @@ public class MobAttack : MonoBehaviour
     public void OnAttackFinished()
     {
         attackCollider.enabled = false;
-        StartCoroutine(CooldownCoroutine());
+       // StartCoroutine(CooldownCoroutine());
     }
     // 攻撃後に一呼吸置く時間
-    [SerializeField]
-    float attackColldownTime = 0.5f;
+    //[SerializeField]
+    //float attackColldownTime = 0.5f;
 
-    private IEnumerator CooldownCoroutine()
-    {
-        yield return new WaitForSeconds(attackColldownTime);
-        _status.GoToNormalStateIfPossible();
+    //private IEnumerator CooldownCoroutine()
+    //{
+    //   // yield return new WaitForSeconds(attackColldownTime);
+    //    _status.GoToNormalStateIfPossible();
 
-    }
+    //}
 }
