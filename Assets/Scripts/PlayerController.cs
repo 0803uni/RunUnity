@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         //ここで重力の値を変更している
-       // Physics.gravity = new Vector3(0, -100, 0);
+        // Physics.gravity = new Vector3(0, -100, 0);
 
         //マイフレームアクセスするので、負荷を下げるためにキャッシュしておく
         characterController = GetComponent<CharacterController>();
@@ -69,12 +69,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             var Speed = animator.GetFloat("MoveSpeed");
-            animator.SetFloat("MoveSpeed",Speed * 100);
+            animator.SetFloat("MoveSpeed", Speed * 100);
         }
 
-        if(Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            var Distance = animator.GetFloat("Direciton"); 
+            var Distance = animator.GetFloat("Direciton");
             animator.SetFloat("Direciton", 120f);
         }
 
@@ -106,27 +106,27 @@ public class PlayerController : MonoBehaviour
 
         //    //入力軸による、移動処理
         moveVelocity.x = Input.GetAxis("Horizontal") * moveSpeed;
-            moveVelocity.y = Input.GetAxis("Vertical") * moveSpeed;
+        moveVelocity.y = Input.GetAxis("Vertical") * moveSpeed;
 
         //    //移動方向に向く
-            _transform.LookAt(_transform.position + new Vector3
-                (moveVelocity.x, 0, moveVelocity.z));
+        _transform.LookAt(_transform.position + new Vector3
+            (moveVelocity.x, 0, moveVelocity.z));
 
-            if (characterController.isGrounded)
+        if (characterController.isGrounded)
+        {
+            if (Input.GetKey(KeyCode.Space))
             {
-                if (Input.GetKey(KeyCode.Space))
-            {
-                    //ジャンプの際に上方向に移動させる
-                    moveVelocity.y = JumpPower;
-                }
+                //ジャンプの際に上方向に移動させる
+                moveVelocity.y = JumpPower;
             }
-            else
-            {
-                //重力によって加速
-                moveVelocity.y += Physics.gravity.y * Time.deltaTime;
-            }
-            characterController.Move(moveVelocity * Time.deltaTime);
         }
-
+        else
+        {
+            //重力によって加速
+            moveVelocity.y += Physics.gravity.y * Time.deltaTime;
+        }
+        characterController.Move(moveVelocity * Time.deltaTime);
     }
+
+}
 
