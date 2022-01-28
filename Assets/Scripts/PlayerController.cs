@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         //ここで重力の値を変更している
-         Physics.gravity = new Vector3(0, -100, 0);
+        Physics.gravity = new Vector3(0, -80, 0);
 
         //マイフレームアクセスするので、負荷を下げるためにキャッシュしておく
         characterController = GetComponent<CharacterController>();
@@ -118,6 +118,16 @@ public class PlayerController : MonoBehaviour
             {
                 //ジャンプの際に上方向に移動させる
                 moveVelocity.y = JumpPower;
+
+                if (animator.GetFloat("MoveSpeed") == 0f)
+                {
+                    animator.GetBool("Rest,true");
+
+                }
+                else
+                {
+                    animator.SetBool("JumpPower", true);
+                }
             }
         }
         else
