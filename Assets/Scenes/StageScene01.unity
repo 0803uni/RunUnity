@@ -3322,7 +3322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &664719160
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5378,8 +5378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90011b934a98eea489e3f9062b1ef921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 100
-  JumpPower: 5
+  moveSpeed: 10
+  JumpPower: 100
   animator: {fileID: 993678777}
 --- !u!143 &993678762
 CharacterController:
