@@ -90,18 +90,18 @@ public class PlayerController : MonoBehaviour
         //    animator.SetFloat("Direction", -0.2f);
         //}
 
-        //if (Input.GetKey(KeyCode.Space))
-        //{
-        //    if (animator.GetFloat("MoveSpeed") == 0f)
-        //    {
-        //        animator.GetBool("Rest,true");
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (animator.GetFloat("MoveSpeed") == 0f)
+            {
+                animator.GetBool("Rest,true");
 
-        //    }
-        //    else
-        //    {
-        //        animator.SetBool("JumpPower", true);
-        //    }
-        //}
+            }
+            else
+            {
+                animator.SetBool("JumpPower", true);
+            }
+        }
 
 
         //    //入力軸による、移動処理
