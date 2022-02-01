@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(CharacterController))]
@@ -140,8 +141,8 @@ public class PlayerController : MonoBehaviour
     //ゴール地点
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ゴール");
-
+        
+        SceneManager.LoadScene("ResultScene");
     }
 
 }

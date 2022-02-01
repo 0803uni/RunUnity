@@ -37,8 +37,11 @@ public class EnemyStatus : MobStatus
     // 3秒後に死んでしまう
     IEnumerator DestroyCoroutine()
     {
-        yield return new WaitForSeconds(3);
-        // 3秒間待った後に実行される
-        Destroy(gameObject);
+        
+        
+            yield return new WaitForSeconds(3);
+            // 3秒間待った後に実行される
+            Destroy(gameObject);
+        
     }
 }
