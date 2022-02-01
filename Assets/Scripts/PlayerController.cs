@@ -137,6 +137,12 @@ public class PlayerController : MonoBehaviour
         }
         characterController.Move(moveVelocity * Time.deltaTime);
     }
+    //ゴール地点
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("ゴール");
+
+    }
 
 }
 
