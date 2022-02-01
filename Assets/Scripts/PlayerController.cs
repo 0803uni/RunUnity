@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-
+   
     [SerializeField]
     private float moveSpeed = 3;
     [SerializeField]
@@ -139,11 +139,19 @@ public class PlayerController : MonoBehaviour
         characterController.Move(moveVelocity * Time.deltaTime);
     }
     //ゴール地点
-    private void OnTriggerEnter(Collider other)
-    {
-        
-        SceneManager.LoadScene("ResultScene");
-    }
+    //public void OnTriggerEnter(Collider other)
+
+    //{
+
+    //    SceneManager.LoadScene("ResultScene");
+       
+    //}
+    ////ゴール地点
+    //private void OnTriggerEnter(Collider other)
+    //{
+
+    //    SceneManager.LoadScene("ResultScene");
+    //}
 
 }
 

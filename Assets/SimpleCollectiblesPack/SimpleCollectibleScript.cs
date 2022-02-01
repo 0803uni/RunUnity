@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
 public class SimpleCollectibleScript : MonoBehaviour {
@@ -32,9 +33,13 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Player") {
+		if (other.tag == "Player") 
+		{
 			Collect ();
+			
 		}
+		
+		SceneManager.LoadScene("ResultScene");
 	}
 
 	public void Collect()
@@ -50,37 +55,37 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 			//Add in code here;
 
-			Debug.Log ("Do NoType Command");
+			//Debug.Log ("Do NoType Command");
 		}
 		if (CollectibleType == CollectibleTypes.Type1) {
 
 			//Add in code here;
 
-			Debug.Log ("Do NoType Command");
+			//Debug.Log ("Do NoType Command");
 		}
 		if (CollectibleType == CollectibleTypes.Type2) {
 
 			//Add in code here;
 
-			Debug.Log ("Do NoType Command");
+			//Debug.Log ("Do NoType Command");
 		}
 		if (CollectibleType == CollectibleTypes.Type3) {
 
 			//Add in code here;
 
-			Debug.Log ("Do NoType Command");
+			//Debug.Log ("Do NoType Command");
 		}
 		if (CollectibleType == CollectibleTypes.Type4) {
 
 			//Add in code here;
 
-			Debug.Log ("Do NoType Command");
+			//Debug.Log ("Do NoType Command");
 		}
 		if (CollectibleType == CollectibleTypes.Type5) {
 
 			//Add in code here;
 
-			Debug.Log ("Do NoType Command");
+			//Debug.Log ("Do NoType Command");
 		}
 
 		Destroy (gameObject);
