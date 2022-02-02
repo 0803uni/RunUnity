@@ -15,15 +15,15 @@ public class DataWrite : MonoBehaviour
         retime = (int)totalTime;
         timerTexts = retime.ToString();
 
-        if (retime == 0)
-        {
-            SceneManager.LoadScene("ResultScene");
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            data.score = 100;
+       // if (retime == 0)
+        //{
+          //  SceneManager.LoadScene("ResultScene");
+        //}
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+          //  data.score = 100;
 
-            SceneManager.LoadScene("ResultScene");
-        }
+            //SceneManager.LoadScene("ResultScene");
+        //}
     }
 }
