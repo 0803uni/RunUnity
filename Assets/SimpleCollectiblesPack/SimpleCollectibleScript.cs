@@ -20,7 +20,7 @@ public class SimpleCollectibleScript : MonoBehaviour {
 	
 	[SerializeField]
 	DataKeep data;
-    public object Gem2Red;
+    public int Gem2Red;
 
     void Start ()
 	{
@@ -37,7 +37,7 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		Gem2Red = data.score=10000;
+		data.score += 1000000;
 		if (other.tag == "Player") 
 		{
 			

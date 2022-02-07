@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 10350509b24ea154bbd3800e36fa8306, type: 2}
-  scoreTextObject: {fileID: 0}
+  scoreTextObject: {fileID: 1466594571464756, guid: 908e3427a87e203428312e7911a4c50c, type: 3}
 --- !u!1 &875588069
 GameObject:
   m_ObjectHideFlags: 0

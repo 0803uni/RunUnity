@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-   
+    
     [SerializeField]
     private float moveSpeed = 3;
     [SerializeField]

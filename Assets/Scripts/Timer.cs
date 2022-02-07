@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         totalTime -= Time.deltaTime;
-        data.score = (int)totalTime;
+        data.score = (int)totalTime  ;
         ritime = totalTime;
         timerTexts.text = ritime.ToString();
         if(ritime==0)
