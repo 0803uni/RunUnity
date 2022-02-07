@@ -9,10 +9,13 @@ public class TotalScore : MonoBehaviour
     DataKeep data;
     public Text ScoreText;
     int score;
+    public object Gem2Red;
+
     void Start()
     {
         score = data.score;
-        ScoreText.text = string.Format("Score;{0}",score * 10);
+        ScoreText.text = string.Format("Score;{0}", score * 10 );
+        //ScoreText.text = string.Format("Score;{0}",score * 10 + (int)Gem2Red);
     }
 
     

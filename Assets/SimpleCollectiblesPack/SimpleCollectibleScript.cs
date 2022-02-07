@@ -17,13 +17,17 @@ public class SimpleCollectibleScript : MonoBehaviour {
 	public AudioClip collectSound;
 
 	public GameObject collectEffect;
+	
+	[SerializeField]
+	DataKeep data;
+    public object Gem2Red;
 
-	// Use this for initialization
-	void Start () {
+    void Start ()
+	{
 		
 	}
 	
-	// Update is called once per frame
+	
 	void Update () {
 
 		if (rotate)
@@ -33,8 +37,10 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
+		Gem2Red = data.score=10000;
 		if (other.tag == "Player") 
 		{
+			
 			Collect ();
 			
 		}
