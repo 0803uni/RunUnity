@@ -12,6 +12,6 @@ public class PlayerStatus : MobStatus
     private IEnumerator GoToGameOverCoroutine()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("TitleScene");
+        SceneManager.LoadScene("ResultScene");
     }
 }
