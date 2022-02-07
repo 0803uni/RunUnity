@@ -12,7 +12,7 @@ public class TotalScore : MonoBehaviour
     void Start()
     {
         score = data.score;
-        ScoreText.text = string.Format("Score;{0}",score);
+        ScoreText.text = string.Format("Score;{0}",score*100);
     }
 
     
