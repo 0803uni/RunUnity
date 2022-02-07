@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    [SerializeField]
+    DataKeep data;
     public Text timerTexts;
     [SerializeField]
     float totalTime = 150;
@@ -20,6 +22,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         totalTime -= Time.deltaTime;
+        data.score =(int) totalTime;
         ritime = (int)totalTime;
         timerTexts.text = ritime.ToString();
         if(ritime==0)

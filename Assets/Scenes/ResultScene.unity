@@ -1006,6 +1006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 118e4253345fd1545bf0e22fa8ddd402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 10350509b24ea154bbd3800e36fa8306, type: 2}
   ScoreText: {fileID: 622095731}
 --- !u!4 &1739477140
 Transform:

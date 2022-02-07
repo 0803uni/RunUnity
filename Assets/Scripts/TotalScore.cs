@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class TotalScore : MonoBehaviour
 {
+    [SerializeField]
+    DataKeep data;
     public Text ScoreText;
     int score;
     void Start()
     {
-        score = TargetGene.getscore();
+        score = data.score;
         ScoreText.text = string.Format("Score;{0}",score);
     }
 
