@@ -37,7 +37,7 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		Gem2Red = data.score=10000;
+		
 		if (other.tag == "Player") 
 		{
 			
