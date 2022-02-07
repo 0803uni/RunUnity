@@ -10,8 +10,8 @@ public class Timer : MonoBehaviour
     DataKeep data;
     public Text timerTexts;
     [SerializeField]
-    float totalTime = 150;
-    int ritime;
+    float totalTime = 15.0f;
+    float ritime;
    
     void Start()
     {
@@ -22,8 +22,8 @@ public class Timer : MonoBehaviour
     void Update()
     {
         totalTime -= Time.deltaTime;
-        data.score =(int) totalTime;
-        ritime = (int)totalTime;
+        data.score = (int)totalTime;
+        ritime = totalTime;
         timerTexts.text = ritime.ToString();
         if(ritime==0)
         {
