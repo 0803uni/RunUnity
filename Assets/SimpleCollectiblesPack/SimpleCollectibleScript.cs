@@ -4,96 +4,105 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
-public class SimpleCollectibleScript : MonoBehaviour {
+public class SimpleCollectibleScript : MonoBehaviour
+{
 
-	public enum CollectibleTypes {NoType, Type1, Type2, Type3, Type4, Type5}; // you can replace this with your own labels for the types of collectibles in your game!
+    public enum CollectibleTypes { NoType, Type1, Type2, Type3, Type4, Type5 }; // you can replace this with your own labels for the types of collectibles in your game!
 
-	public CollectibleTypes CollectibleType; // this gameObject's type
+    public CollectibleTypes CollectibleType; // this gameObject's type
 
-	public bool rotate; // do you want it to rotate?
+    public bool rotate; // do you want it to rotate?
 
-	public float rotationSpeed;
+    public float rotationSpeed;
 
-	public AudioClip collectSound;
+    public AudioClip collectSound;
 
-	public GameObject collectEffect;
-	
-	[SerializeField]
-	DataKeep data;
+    public GameObject collectEffect;
+
+    [SerializeField]
+    DataKeep data;
     public int Gem2Red;
 
-    void Start ()
-	{
-		
-	}
-	
-	
-	void Update () {
+    void Start()
+    {
 
-		if (rotate)
-			transform.Rotate (Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
+    }
 
-	}
 
-	void OnTriggerEnter(Collider other)
-	{
-		data.score += 1000000;
-		if (other.tag == "Player") 
-		{
-			
-			Collect ();
-			
-		}
-		
-		SceneManager.LoadScene("ResultScene");
-	}
+    void Update()
+    {
 
-	public void Collect()
-	{
-		if(collectSound)
-			AudioSource.PlayClipAtPoint(collectSound, transform.position);
-		if(collectEffect)
-			Instantiate(collectEffect, transform.position, Quaternion.identity);
+        if (rotate)
+            transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
 
-		//Below is space to add in your code for what happens based on the collectible type
+    }
 
-		if (CollectibleType == CollectibleTypes.NoType) {
+    void OnTriggerEnter(Collider other)
+    {
+        data.score = (int)data.timer + 10000;
 
-			//Add in code here;
+        if (other.tag == "Player")
+        {
 
-			//Debug.Log ("Do NoType Command");
-		}
-		if (CollectibleType == CollectibleTypes.Type1) {
+            Collect();
 
-			//Add in code here;
+        }
 
-			//Debug.Log ("Do NoType Command");
-		}
-		if (CollectibleType == CollectibleTypes.Type2) {
+        SceneManager.LoadScene("ResultScene");
+    }
 
-			//Add in code here;
+    public void Collect()
+    {
+        if (collectSound)
+            AudioSource.PlayClipAtPoint(collectSound, transform.position);
+        if (collectEffect)
+            Instantiate(collectEffect, transform.position, Quaternion.identity);
 
-			//Debug.Log ("Do NoType Command");
-		}
-		if (CollectibleType == CollectibleTypes.Type3) {
+        //Below is space to add in your code for what happens based on the collectible type
 
-			//Add in code here;
+        if (CollectibleType == CollectibleTypes.NoType)
+        {
 
-			//Debug.Log ("Do NoType Command");
-		}
-		if (CollectibleType == CollectibleTypes.Type4) {
+            //Add in code here;
 
-			//Add in code here;
+            //Debug.Log ("Do NoType Command");
+        }
+        if (CollectibleType == CollectibleTypes.Type1)
+        {
 
-			//Debug.Log ("Do NoType Command");
-		}
-		if (CollectibleType == CollectibleTypes.Type5) {
+            //Add in code here;
 
-			//Add in code here;
+            //Debug.Log ("Do NoType Command");
+        }
+        if (CollectibleType == CollectibleTypes.Type2)
+        {
 
-			//Debug.Log ("Do NoType Command");
-		}
+            //Add in code here;
 
-		Destroy (gameObject);
-	}
+            //Debug.Log ("Do NoType Command");
+        }
+        if (CollectibleType == CollectibleTypes.Type3)
+        {
+
+            //Add in code here;
+
+            //Debug.Log ("Do NoType Command");
+        }
+        if (CollectibleType == CollectibleTypes.Type4)
+        {
+
+            //Add in code here;
+
+            //Debug.Log ("Do NoType Command");
+        }
+        if (CollectibleType == CollectibleTypes.Type5)
+        {
+
+            //Add in code here;
+
+            //Debug.Log ("Do NoType Command");
+        }
+
+        Destroy(gameObject);
+    }
 }
