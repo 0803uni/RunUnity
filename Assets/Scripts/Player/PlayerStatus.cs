@@ -4,8 +4,7 @@ using UnityEngine.SceneManagement;
 public class PlayerStatus : MobStatus
 {
     
-    [SerializeField]
-    DataKeep data;
+   
     protected override void OnDie()
     {
         base.OnDie();

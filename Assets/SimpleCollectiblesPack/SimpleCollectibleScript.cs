@@ -39,13 +39,13 @@ public class SimpleCollectibleScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        data.score = (int)data.timer + 10000;
+        
 
         if (other.tag == "Player")
         {
 
             Collect();
-
+            data.score = (int)data.timer + 10000;
         }
 
         SceneManager.LoadScene("ResultScene");

@@ -1758,7 +1758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!136 &285841101
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1767,7 +1767,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285841100}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -6455,8 +6455,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.07172227, y: 0.9164786, z: -0.19099371, w: 0.34415758}
-  m_LocalPosition: {x: 96.32765, y: -23.653538, z: -96.15372}
+  m_LocalRotation: {x: 0.07172222, y: 0.9164786, z: -0.1909935, w: 0.34415767}
+  m_LocalPosition: {x: 96.32764, y: -23.653534, z: -96.1537}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6589,7 +6589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3.44
-  JumpPower: 100
+  JumpPower: 200
   animator: {fileID: 993678777}
 --- !u!143 &993678762
 CharacterController:
@@ -6643,6 +6643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeMax: 1
+  data: {fileID: 0}
 --- !u!114 &993678783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8896,8 +8897,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494942318}
-  m_LocalRotation: {x: 0.07172227, y: 0.9164786, z: -0.19099371, w: 0.34415758}
-  m_LocalPosition: {x: 96.32765, y: -23.653538, z: -96.15372}
+  m_LocalRotation: {x: 0.07172222, y: 0.9164786, z: -0.1909935, w: 0.34415767}
+  m_LocalPosition: {x: 96.32764, y: -23.653534, z: -96.1537}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
