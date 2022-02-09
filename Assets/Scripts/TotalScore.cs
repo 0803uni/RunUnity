@@ -14,8 +14,8 @@ public class TotalScore : MonoBehaviour
     void Start()
     {
         score = data.score;
-        ScoreText.text = string.Format("Score;{0}", score * 10 );
-        //ScoreText.text = string.Format("Score;{0}",score * 10 + (int)Gem2Red);
+        //ScoreText.text = string.Format("Score;{0}", score * 10 );
+        ScoreText.text = string.Format( "Score;{0}",score * 10 );
     }
 
     
