@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyStatus : MobStatus
@@ -39,9 +40,10 @@ public class EnemyStatus : MobStatus
     {
         
         
-            yield return new WaitForSeconds(3);
-            // 3秒間待った後に実行される
-            Destroy(gameObject);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("ResultScene");
+        // 3秒間待った後に実行される
+        Destroy(gameObject);
         
     }
 }
