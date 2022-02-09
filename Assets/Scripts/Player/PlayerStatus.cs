@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 public class PlayerStatus : MobStatus
 {
-    /*
+
     [SerializeField]
     DataKeep data;
     protected override void OnDie()
@@ -15,9 +15,9 @@ public class PlayerStatus : MobStatus
 
     private IEnumerator GoToGameOverCoroutine()
     {
-        data.score += 1000000;
+        data.score = (int)data.timer + 10000;
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("ResultScene");
-}
-*/
+    }
+
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3941,13 +3941,13 @@ GameObject:
   - component: {fileID: 662190151}
   - component: {fileID: 662190153}
   - component: {fileID: 662190152}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CollisionDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &662190151
 Transform:
   m_ObjectHideFlags: 0
@@ -3977,22 +3977,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTriggerEnter:
     m_PersistentCalls:
-      m_Calls: []
-  onTriggerStay:
-    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 664719164}
-        m_TargetAssemblyTypeName: EnemyMove, Assembly-CSharp
-        m_MethodName: OnDetectObject
-        m_Mode: 0
+      - m_Target: {fileID: 993678781}
+        m_TargetAssemblyTypeName: MobStatus, Assembly-CSharp
+        m_MethodName: Damage
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onTriggerStay:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &662190153
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4083,7 +4083,7 @@ GameObject:
   - component: {fileID: 664719171}
   - component: {fileID: 664719170}
   - component: {fileID: 664719172}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5358,7 +5358,7 @@ GameObject:
   - component: {fileID: 803335980}
   - component: {fileID: 803335982}
   - component: {fileID: 803335981}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: AttackRangeDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6455,8 +6455,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.07172227, y: 0.9164786, z: -0.19099371, w: 0.34415758}
-  m_LocalPosition: {x: 96.32765, y: -23.653538, z: -96.15372}
+  m_LocalRotation: {x: 0.071722254, y: 0.9164787, z: -0.19099389, w: 0.34415713}
+  m_LocalPosition: {x: 96.327644, y: -23.65353, z: -96.1537}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6643,6 +6643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeMax: 1
+  data: {fileID: 11400000, guid: 10350509b24ea154bbd3800e36fa8306, type: 2}
 --- !u!114 &993678783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8880,7 +8881,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0067114, y: 1}
+    m_SensorSize: {x: 1.2146739, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -8896,8 +8897,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494942318}
-  m_LocalRotation: {x: 0.07172227, y: 0.9164786, z: -0.19099371, w: 0.34415758}
-  m_LocalPosition: {x: 96.32765, y: -23.653538, z: -96.15372}
+  m_LocalRotation: {x: 0.071722254, y: 0.9164787, z: -0.19099389, w: 0.34415713}
+  m_LocalPosition: {x: 96.327644, y: -23.65353, z: -96.1537}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11460,7 +11461,7 @@ GameObject:
   - component: {fileID: 2134843760}
   - component: {fileID: 2134843762}
   - component: {fileID: 2134843761}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: AttackHitDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11474,9 +11475,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134843759}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.5, y: 5.276, z: 22.1142}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 664719163}
